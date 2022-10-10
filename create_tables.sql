@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS categories(
+	id BIGSERIAL UNIQUE PRIMARY KEY,
+	name VARCHAR(128) UNIQUE 
+	
+);
+
+CREATE TABLE IF NOT EXISTS products(
+	id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+	name VARCHAR(128),
+	price DECIMAL(10,5),
+	category_id INTEGER DEFAULT NULL ,
+	FOREIGN KEY(category_id) REFERENCES categories(id)
+);

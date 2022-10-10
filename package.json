@@ -1,5 +1,5 @@
 {
-  "name": "entrega_testes",
+  "name": "entrega_m4_sp4_leandrojunges",
   "version": "1.0.0",
   "main": "./src/app.js",
   "license": "MIT",
@@ -13,8 +13,12 @@
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
     "jest": "^28.0.2",
-    "nodemon": "^2.0.15",
-    "sucrase": "^3.21.0",
-    "supertest": "^6.2.3"
+    "pg": "^8.8.0",
+    "supertest": "^6.2.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sucrase": "^3.28.0"
   }
 }

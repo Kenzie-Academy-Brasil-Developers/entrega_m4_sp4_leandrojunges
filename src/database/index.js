@@ -1,12 +1,13 @@
 import { Client } from "pg";
+import 'dotenv/config'
 
 const database = new Client(
   process.env.NODE_ENV === "test"
     ? {
-        user: "",
-        host: "",
-        database: "",
-        password: "",
+        user: "leandro-junges",
+        host: "localhost",
+        database: "tests_products",
+        password: "1234",
         port: 5432,
       }
     : {
@@ -19,7 +20,8 @@ const database = new Client(
 );
 
 export const startDatabase = async () => {
-  await database.connect();
+  await database.connect()
+  console.log('Database connected');
 };
 
 export default database;
